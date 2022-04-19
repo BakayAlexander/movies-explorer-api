@@ -4,7 +4,6 @@ const { register } = require('../middlewares/validations');
 
 const authRoutes = express.Router();
 
-// добавить register
 authRoutes.post('/signup', register, createUser);
 authRoutes.post('/signin', register, loginUser);
 

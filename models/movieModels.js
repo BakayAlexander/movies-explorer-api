@@ -52,11 +52,11 @@ const movieSchema = mongoose.Schema({
     required: true,
   },
 
-  // movieId: {
-  //   type: mongoose.Types.ObjectId,
-  //   ref: 'movie',
-  //   required: true,
-  // },
+  movieId: {
+    type: String,
+    required: true,
+    unique: true,
+  },
 
   nameRU: {
     type: String,
@@ -66,18 +66,6 @@ const movieSchema = mongoose.Schema({
     type: String,
     required: true,
   },
-
-  // likes: [
-  //   {
-  //     type: mongoose.Types.ObjectId,
-  //     ref: 'user',
-  //   },
-  // ],
-  // createdAt: {
-  //   type: Date,
-  //   default: Date.now(),
-  //   required: true,
-  // },
 });
 
 exports.Movie = mongoose.model('movie', movieSchema);

@@ -5,7 +5,7 @@ npm-debug.log*
 
 .env
 .prettierrc
-.http
+request.http
 
 # Dependency directory
 node_modules

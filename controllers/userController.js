@@ -9,7 +9,6 @@ const { User } = require('../models/userModels');
 
 exports.createUser = async (req, res, next) => {
   try {
-    // eslint-disable-next-line object-curly-newline
     const { email, password, name } = req.body;
     const existingUser = await User.findOne({ email });
     if (existingUser) {
@@ -83,50 +82,3 @@ exports.updateUserProfile = async (req, res, next) => {
     return next(err);
   }
 };
-
-// exports.getUsers = async (req, res, next) => {
-//   try {
-//     const users = await User.find({});
-//     return res.send(users);
-//   } catch (err) {
-//     return next(err);
-//   }
-// };
-
-// exports.getUserById = async (req, res, next) => {
-//   try {
-//     const user = await User.findById(req.params.userId);
-//     if (user) {
-//       return res.send(user);
-//     }
-//     return next(new NotFoundError('Пользователь не найден'));
-//   } catch (err) {
-//     if (err.name === 'CastError') {
-//       return next(new ValidationError('Введены некорректные данные'));
-//     }
-//     return next(err);
-//   }
-// };
-
-// exports.updateUserAvatar = async (req, res, next) => {
-//   try {
-//     const { avatar } = req.body;
-//     const result = await User.findByIdAndUpdate(
-//       req.user._id,
-//       { avatar },
-//       {
-//         new: true,
-//         runValidators: true,
-//       }
-//     );
-//     if (result) {
-//       return res.send(result);
-//     }
-//     return next(new NotFoundError('Пользователь не найден'));
-//   } catch (err) {
-//     if (err.name === 'ValidationError') {
-//       return next(new ValidationError('Введены некорректные данные'));
-//     }
-//     return next(err);
-//   }
-// };
