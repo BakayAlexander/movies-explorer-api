@@ -18,21 +18,25 @@ const NotFoundError = require('./erros/NotFoundError');
 
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 const { DB_ADDRESS, PORT } = require('./config');
+const limiter = require('./middlewares/limiter');
 
 const app = express();
 
 app.use(helmet());
 app.disable('x-powered-by');
 
+app.use(limiter);
+
 app.use(
   cors({
     origin: [
       'http://localhost:3000',
-      // 'http://mesto.bakay.students.nomoredomains.work',
-      // 'https://mesto.bakay.students.nomoredomains.work',
+      'http://bakay.nomoredomains.work',
+      'https://bakay.nomoredomains.work',
+      'https://api.nomoreparties.co/beatfilm-movies',
     ],
     credentials: true,
-  })
+  }),
 );
 
 app.use(bodyParser.json()); // сборка json-формата

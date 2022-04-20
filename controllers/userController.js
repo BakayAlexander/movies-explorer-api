@@ -12,7 +12,9 @@ exports.createUser = async (req, res, next) => {
     const { email, password, name } = req.body;
     const existingUser = await User.findOne({ email });
     if (existingUser) {
-      return next(new ConflictError('Пользователь с таким email уже существует'));
+      return next(
+        new ConflictError('Пользователь с таким email уже существует'),
+      );
     }
     const hash = await bcrypt.hash(password, SALT_ROUNDS);
     const user = await User.create({
@@ -20,7 +22,6 @@ exports.createUser = async (req, res, next) => {
       password: hash,
       name,
     });
-    // Необходимо использовать промежуточное решение, чтобы mongoose не возвращал пароль
     const userWithoutPassword = await User.findOne({ _id: user._id });
     return res.send(userWithoutPassword);
   } catch (err) {
@@ -69,7 +70,7 @@ exports.updateUserProfile = async (req, res, next) => {
     const result = await User.findByIdAndUpdate(
       req.user._id,
       { email, name },
-      { new: true, runValidators: true }
+      { new: true, runValidators: true },
     );
     if (result) {
       return res.send(result);

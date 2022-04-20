@@ -32,16 +32,24 @@ const validateProfile = celebrate({
 
 const createMovieValidation = celebrate({
   [Segments.BODY]: Joi.object().keys({
-    country: Joi.string().required().min(2).max(300).messages({
-      'string.min': 'Поле должно быть длинее 2 символов',
-      'string.max': 'Поле должно быть короче 30 символов',
-      'any.required': 'Укажите страну',
-    }),
-    director: Joi.string().required().min(2).max(300).messages({
-      'string.min': 'Поле должно быть длинее 2 символов',
-      'string.max': 'Поле должно быть короче 30 символов',
-      'any.required': 'Укажите режиссера',
-    }),
+    country: Joi.string()
+      .required()
+      .min(2)
+      .max(300)
+      .messages({
+        'string.min': 'Поле должно быть длинее 2 символов',
+        'string.max': 'Поле должно быть короче 30 символов',
+        'any.required': 'Укажите страну',
+      }),
+    director: Joi.string()
+      .required()
+      .min(2)
+      .max(300)
+      .messages({
+        'string.min': 'Поле должно быть длинее 2 символов',
+        'string.max': 'Поле должно быть короче 30 символов',
+        'any.required': 'Укажите режиссера',
+      }),
     duration: Joi.number().required().messages({
       'any.required': 'Укажите продолжительность',
     }),
@@ -53,26 +61,45 @@ const createMovieValidation = celebrate({
       'string.min': 'Поле должно быть длинее 2 символов',
       'any.required': 'Укажите описание',
     }),
-    image: Joi.string().required().pattern(urlRegEx).messages({
-      'any.required': 'Укажите картинку',
-    }),
-    trailerLink: Joi.string().required().pattern(urlRegEx).messages({
-      'any.required': 'Укажите ссылку на трейлер',
-    }),
-    thumbnail: Joi.string().required().pattern(urlRegEx).messages({
-      'any.required': 'Укажите ссылку на постер',
-    }),
-    nameRU: Joi.string().required().min(2).max(300).messages({
-      'string.min': 'Поле должно быть длинее 2 символов',
-      'string.max': 'Поле должно быть короче 300 символов',
-      'any.required': 'Укажите название фильма',
-    }),
-    nameEN: Joi.string().required().min(2).max(300).messages({
-      'string.min': 'Поле должно быть длинее 2 символов',
-      'string.max': 'Поле должно быть короче 300 символов',
-      'any.required': 'Укажите название фильма',
-    }),
-    movieId: Joi.string().required(),
+    image: Joi.string()
+      .required()
+      .pattern(urlRegEx)
+      .messages({
+        'any.required': 'Укажите картинку',
+      }),
+    trailerLink: Joi.string()
+      .required()
+      .pattern(urlRegEx)
+      .messages({
+        'any.required': 'Укажите ссылку на трейлер',
+      }),
+    thumbnail: Joi.string()
+      .required()
+      .pattern(urlRegEx)
+      .messages({
+        'any.required': 'Укажите ссылку на постер',
+      }),
+    nameRU: Joi.string()
+      .required()
+      .min(2)
+      .max(300)
+      .messages({
+        'string.min': 'Поле должно быть длинее 2 символов',
+        'string.max':
+          'Поле должно быть короче 300 символов',
+        'any.required': 'Укажите название фильма',
+      }),
+    nameEN: Joi.string()
+      .required()
+      .min(2)
+      .max(300)
+      .messages({
+        'string.min': 'Поле должно быть длинее 2 символов',
+        'string.max':
+          'Поле должно быть короче 300 символов',
+        'any.required': 'Укажите название фильма',
+      }),
+    movieId: Joi.number().required(),
   }),
 });
 

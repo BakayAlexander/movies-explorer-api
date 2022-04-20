@@ -58,7 +58,7 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjVlYWNhMzE2MjE3
       "image": "https://someurl.com",
       "trailerLink": "https://someurl.com",
       "thumbnail": "https://someurl.com",
-      "movieId": "5",
+      "movieId": 1,
       "nameRU": "Властелин Колец",
       "nameEN": "Lord of the Rings"
 }
