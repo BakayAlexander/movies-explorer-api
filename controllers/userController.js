@@ -65,10 +65,10 @@ exports.getUserMe = async (req, res, next) => {
 
 exports.updateUserProfile = async (req, res, next) => {
   try {
-    const { email, password, name } = req.body;
+    const { email, name } = req.body;
     const result = await User.findByIdAndUpdate(
       req.user._id,
-      { email, password, name },
+      { email, name },
       { new: true, runValidators: true }
     );
     if (result) {

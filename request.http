@@ -3,7 +3,7 @@ POST http://localhost:3000/signup
 Content-Type: application/json
 
 {
-  "email": "testingsigninl@mail.ru",
+  "email": "testingsignin@mail.ru",
   "password": "qweasdzxc",
   "name": "Первый тестовый пользователь"
   }
@@ -14,7 +14,7 @@ POST http://localhost:3000/signin
 Content-Type: application/json
 
 {
-  "email": "testingsigninl@mail.ru",
+  "email": "testingsignin@mail.ru",
   "password": "qweasdzxc"
 }
 ###
@@ -33,7 +33,7 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjVlYWNhMzE2MjE3
 
 {
   "email": "testingsigninl@mail.ru",
-  "name": "Первый тестовый пользователь"
+  "name": "Первый тестовый пользов"
   }
 
 
@@ -58,14 +58,14 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjVlYWNhMzE2MjE3
       "image": "https://someurl.com",
       "trailerLink": "https://someurl.com",
       "thumbnail": "https://someurl.com",
-      "movieId": "4",
+      "movieId": "5",
       "nameRU": "Властелин Колец",
       "nameEN": "Lord of the Rings"
 }
 
 //Удалить конкретный фильм
 ###
-DELETE http://localhost:3000/movies/625ecd39f5350ffc00ca8a83
+DELETE http://localhost:3000/movies/625ed17a1b70f345a2e8416f
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjVlYWNhMzE2MjE3ZmJhNWEyOGZjNzkiLCJpYXQiOjE2NTAzNzM4ODAsImV4cCI6MTY1MDk3ODY4MH0.SGM8Fzt_HFV3ccedP3EgQNYq-w-GGIZ44Cw0DhQCm5Q
 
