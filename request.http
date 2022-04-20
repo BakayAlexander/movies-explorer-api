@@ -1,5 +1,5 @@
 //Регистрация нового пользователя
-POST http://localhost:3000/signup
+POST http://localhost:3000/api/signup
 Content-Type: application/json
 
 {
@@ -10,7 +10,7 @@ Content-Type: application/json
 
 ####
 //Аутентификация пользователя
-POST http://localhost:3000/signin
+POST http://localhost:3000/api/signin
 Content-Type: application/json
 
 {
@@ -21,31 +21,31 @@ Content-Type: application/json
 
 //Достать собственный профиль
 ###
-GET http://localhost:3000/users/me
+GET http://localhost:3000/api/users/me
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjVlYWNhMzE2MjE3ZmJhNWEyOGZjNzkiLCJpYXQiOjE2NTAzNzM4ODAsImV4cCI6MTY1MDk3ODY4MH0.SGM8Fzt_HFV3ccedP3EgQNYq-w-GGIZ44Cw0DhQCm5Q
 
 //Обновить информацию о пользователе
 ###
-PATCH http://localhost:3000/users/me
+PATCH http://localhost:3000/api/users/me
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjVlYWNhMzE2MjE3ZmJhNWEyOGZjNzkiLCJpYXQiOjE2NTAzNzM4ODAsImV4cCI6MTY1MDk3ODY4MH0.SGM8Fzt_HFV3ccedP3EgQNYq-w-GGIZ44Cw0DhQCm5Q
 
 {
   "email": "testingsigninl@mail.ru",
-  "name": "Первый тестовый пользов"
+  "name": "Первый тестовый пользователь"
   }
 
 
   //Достать все фильмы
 ###
-GET http://localhost:3000/movies
+GET http://localhost:3000/api/movies
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjVlYWNhMzE2MjE3ZmJhNWEyOGZjNzkiLCJpYXQiOjE2NTAzNzM4ODAsImV4cCI6MTY1MDk3ODY4MH0.SGM8Fzt_HFV3ccedP3EgQNYq-w-GGIZ44Cw0DhQCm5Q
 
 //Добавить новый фильм
 ###
-POST http://localhost:3000/movies
+POST http://localhost:3000/api/movies
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjVlYWNhMzE2MjE3ZmJhNWEyOGZjNzkiLCJpYXQiOjE2NTAzNzM4ODAsImV4cCI6MTY1MDk3ODY4MH0.SGM8Fzt_HFV3ccedP3EgQNYq-w-GGIZ44Cw0DhQCm5Q
 
@@ -65,7 +65,7 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjVlYWNhMzE2MjE3
 
 //Удалить конкретный фильм
 ###
-DELETE http://localhost:3000/movies/625ed17a1b70f345a2e8416f
+DELETE http://localhost:3000/api/movies/625ed17a1b70f345a2e8416f
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjVlYWNhMzE2MjE3ZmJhNWEyOGZjNzkiLCJpYXQiOjE2NTAzNzM4ODAsImV4cCI6MTY1MDk3ODY4MH0.SGM8Fzt_HFV3ccedP3EgQNYq-w-GGIZ44Cw0DhQCm5Q
 

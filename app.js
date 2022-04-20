@@ -12,7 +12,7 @@ const cors = require('cors');
 
 const helmet = require('helmet');
 
-const { routes } = require('./routes/app');
+const { routes } = require('./routes/index');
 const errorHandler = require('./middlewares/errorHandler');
 const NotFoundError = require('./erros/NotFoundError');
 
@@ -21,11 +21,8 @@ const { DB_ADDRESS, PORT } = require('./config');
 
 const app = express();
 
-// app.use(helmet());
+app.use(helmet());
 app.disable('x-powered-by');
-
-// Слушаем 3000 порт
-// const { PORT = 3000 } = process.env;
 
 app.use(
   cors({
