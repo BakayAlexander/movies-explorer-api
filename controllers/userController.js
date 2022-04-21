@@ -67,6 +67,9 @@ exports.getUserMe = async (req, res, next) => {
 exports.updateUserProfile = async (req, res, next) => {
   try {
     const { email, name } = req.body;
+    if (!email || !name) {
+      return next(new ValidationError('Введены некорректные данные'));
+    }
     const result = await User.findByIdAndUpdate(
       req.user._id,
       { email, name },
@@ -79,6 +82,11 @@ exports.updateUserProfile = async (req, res, next) => {
   } catch (err) {
     if (err.name === 'ValidationError') {
       return next(new ValidationError('Введены некорректные данные'));
+    }
+    if (err.code === 11000) {
+      return next(
+        new ConflictError('Пользователь с таким email уже существует'),
+      );
     }
     return next(err);
   }

@@ -25,6 +25,8 @@ const app = express();
 app.use(helmet());
 app.disable('x-powered-by');
 
+app.use(requestLogger);
+
 app.use(limiter);
 
 app.use(
@@ -41,8 +43,6 @@ app.use(
 
 app.use(bodyParser.json()); // сборка json-формата
 app.use(bodyParser.urlencoded({ extended: true })); // прием web-страниц
-
-app.use(requestLogger);
 
 app.use(routes);
 

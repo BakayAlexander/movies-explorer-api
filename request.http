@@ -3,7 +3,7 @@ POST http://localhost:3000/api/signup
 Content-Type: application/json
 
 {
-  "email": "testingsignin@mail.ru",
+  "email": "testingsignin5@mail.ru",
   "password": "qweasdzxc",
   "name": "Первый тестовый пользователь"
   }
@@ -14,7 +14,7 @@ POST http://localhost:3000/api/signin
 Content-Type: application/json
 
 {
-  "email": "testingsignin@mail.ru",
+  "email": "testingsignin5@mail.ru",
   "password": "qweasdzxc"
 }
 ###
@@ -29,11 +29,11 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjVlYWNhMzE2MjE3
 ###
 PATCH http://localhost:3000/api/users/me
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjVlYWNhMzE2MjE3ZmJhNWEyOGZjNzkiLCJpYXQiOjE2NTAzNzM4ODAsImV4cCI6MTY1MDk3ODY4MH0.SGM8Fzt_HFV3ccedP3EgQNYq-w-GGIZ44Cw0DhQCm5Q
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjYxNmM3OGYwYzNhZDc4ZjljNjFkNzAiLCJpYXQiOjE2NTA1NTIyOTYsImV4cCI6MTY1MTE1NzA5Nn0.qNuxtzeHi6F05xZPQKbqeqyma1S6uRfTybLqlIKgHvw
 
 {
-  "email": "testingsigninl@mail.ru",
-  "name": "Первый тестовый пользователь"
+  "email": "testingsignin5@mail.ru",
+  "name": "Первый тестовый пользователь2d"
   }
 
 
@@ -65,7 +65,7 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjVlYWNhMzE2MjE3
 
 //Удалить конкретный фильм
 ###
-DELETE http://localhost:3000/api/movies/625ed17a1b70f345a2e8416f
+DELETE http://localhost:3000/api/movies/test4583q0d2574b5862test
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjVlYWNhMzE2MjE3ZmJhNWEyOGZjNzkiLCJpYXQiOjE2NTAzNzM4ODAsImV4cCI6MTY1MDk3ODY4MH0.SGM8Fzt_HFV3ccedP3EgQNYq-w-GGIZ44Cw0DhQCm5Q
 
