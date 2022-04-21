@@ -5,4 +5,6 @@ const SALT_ROUNDS = 10;
 const PORT = 3000;
 const DB_ADDRESS = 'mongodb://localhost:27017/moviesdb';
 
-module.exports = { SALT_ROUNDS, urlRegEx, jwtKey, DB_ADDRESS, PORT };
+module.exports = {
+  SALT_ROUNDS, urlRegEx, jwtKey, DB_ADDRESS, PORT,
+};
