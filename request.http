@@ -1,0 +1,72 @@
+//Регистрация нового пользователя
+POST http://localhost:3000/api/signup
+Content-Type: application/json
+
+{
+  "email": "testingsignin5@mail.ru",
+  "password": "qweasdzxc",
+  "name": "Первый тестовый пользователь"
+  }
+
+####
+//Аутентификация пользователя
+POST http://localhost:3000/api/signin
+Content-Type: application/json
+
+{
+  "email": "testingsignin5@mail.ru",
+  "password": "qweasdzxc"
+}
+###
+
+//Достать собственный профиль
+###
+GET http://localhost:3000/api/users/me
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjVlYWNhMzE2MjE3ZmJhNWEyOGZjNzkiLCJpYXQiOjE2NTAzNzM4ODAsImV4cCI6MTY1MDk3ODY4MH0.SGM8Fzt_HFV3ccedP3EgQNYq-w-GGIZ44Cw0DhQCm5Q
+
+//Обновить информацию о пользователе
+###
+PATCH http://localhost:3000/api/users/me
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjYxNmM3OGYwYzNhZDc4ZjljNjFkNzAiLCJpYXQiOjE2NTA1NTIyOTYsImV4cCI6MTY1MTE1NzA5Nn0.qNuxtzeHi6F05xZPQKbqeqyma1S6uRfTybLqlIKgHvw
+
+{
+  "email": "testingsignin5@mail.ru",
+  "name": "Первый тестовый пользователь2d"
+  }
+
+
+  //Достать все фильмы
+###
+GET http://localhost:3000/api/movies
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjVlYWNhMzE2MjE3ZmJhNWEyOGZjNzkiLCJpYXQiOjE2NTAzNzM4ODAsImV4cCI6MTY1MDk3ODY4MH0.SGM8Fzt_HFV3ccedP3EgQNYq-w-GGIZ44Cw0DhQCm5Q
+
+//Добавить новый фильм
+###
+POST http://localhost:3000/api/movies
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjVlYWNhMzE2MjE3ZmJhNWEyOGZjNzkiLCJpYXQiOjE2NTAzNzM4ODAsImV4cCI6MTY1MDk3ODY4MH0.SGM8Fzt_HFV3ccedP3EgQNYq-w-GGIZ44Cw0DhQCm5Q
+
+{
+      "country": "Austria",
+      "director": "Sir Christopher Li",
+      "duration": 138,
+      "year": "2020",
+      "description": "Here will be a long description",
+      "image": "https://someurl.com",
+      "trailerLink": "https://someurl.com",
+      "thumbnail": "https://someurl.com",
+      "movieId": 1,
+      "nameRU": "Властелин Колец",
+      "nameEN": "Lord of the Rings"
+}
+
+//Удалить конкретный фильм
+###
+DELETE http://localhost:3000/api/movies/test4583q0d2574b5862test
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjVlYWNhMzE2MjE3ZmJhNWEyOGZjNzkiLCJpYXQiOjE2NTAzNzM4ODAsImV4cCI6MTY1MDk3ODY4MH0.SGM8Fzt_HFV3ccedP3EgQNYq-w-GGIZ44Cw0DhQCm5Q
+
+
