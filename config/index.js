@@ -6,7 +6,7 @@ const {
 } = process.env;
 const jwtKey = NODE_ENV === 'production' ? JWT_SECRET : 'secret-key';
 const SALT_ROUNDS = 10;
-const PORT = 3000;
+const PORT = 3001;
 
 module.exports = {
   SALT_ROUNDS,
