@@ -33,6 +33,7 @@ app.use(
   cors({
     origin: [
       'http://localhost:3000',
+      'http://localhost:3001/api/movies',
       'http://bakay.nomoredomains.work',
       'https://bakay.nomoredomains.work',
       'https://api.nomoreparties.co/beatfilm-movies',
