@@ -27,6 +27,6 @@
 
 # Public domain
 
-[Movies Explorer Api Domain](https://api.bakay.nomoredomains.work)
+[Movies Explorer Api Domain](https://api.bakay.nomoredomains.work)  
 [Movies Explorer Api Ip](http://51.250.103.141)
 
