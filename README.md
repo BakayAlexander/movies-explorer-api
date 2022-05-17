@@ -10,7 +10,8 @@
 
 - :sparkler: Express.js
 -  :mag_right: MongoDB
-- :closed_lock_with_key: Celebrate
+- :closed_lock_with_key: CORS
+- :moyai: Celebrate
 - :electric_plug: Mongoose
 - :door: Helmet and limiter
 - :books: AirBnb Linter Config
