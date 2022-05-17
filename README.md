@@ -16,7 +16,7 @@
 - :books: AirBnb Linter Config
 - :mega: BEM
 
-### `npm run start`
+### `npm run dev`
 
 - Download this project or `git clone`
 - Run command `npm i`
